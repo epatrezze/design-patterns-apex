@@ -3,7 +3,7 @@
 Repositorio com os 22 padroes GoF implementados em Apex, com exemplos praticos e alinhados ao dia a dia de quem desenvolve em Salesforce (Sales/Service Cloud). Cada padrao possui uma classe com cabecalho contextual e metodos documentados em nivel de projeto.
 
 ## O que voce encontra aqui
-- 22 padroes GoF em Apex, organizados por pasta.
+- 22 padrões em Apex, organizados por pasta.
 - `demo()` em cada classe para execucao rapida no Execute Anonymous.
 - Exemplos com objetos padrao (Account, Case, Opportunity, Lead, Contact, Task).
 - Comentarios em cada metodo (o que faz, entradas e retornos).
