@@ -8,6 +8,38 @@ Repositorio com os 22 padroes GoF implementados em Apex, com exemplos praticos e
 - Exemplos com objetos padrao (Account, Case, Opportunity, Lead, Contact, Task).
 - Comentarios em cada metodo (o que faz, entradas e retornos).
 
+## Estrutura do repositorio
+```
+patterns/<NomeDoPadrao>/<NomeDoPadrao>Pattern.cls
+```
+
+## Cenarios de uso (por padrao)
+| Categoria | Padrao | Quando usar em Salesforce |
+| --- | --- | --- |
+| Criacional | Factory Method | Criacao de Cases variando por canal (Email, Phone, Web). |
+| Criacional | Abstract Factory | Onboarding de clientes com familias de registros (Sales vs Service). |
+| Criacional | Builder | Montagem de pacotes com Account, Contact, Opportunity e Tasks. |
+| Criacional | Prototype | Criar Leads a partir de template pre-configurado. |
+| Criacional | Singleton | Cache local de configuracoes da org. |
+| Estrutural | Adapter | Integrar payload legado para Lead sem mudar o legado. |
+| Estrutural | Bridge | Notificacoes desacopladas do canal (Email/Chatter). |
+| Estrutural | Composite | Consolidar receita em hierarquias de contas. |
+| Estrutural | Decorator | Enriquecer descricao de Case com camadas (SLA, compliance). |
+| Estrutural | Facade | Simplificar onboarding com um unico metodo. |
+| Estrutural | Flyweight | Reaproveitar templates de Task para reduzir memoria. |
+| Estrutural | Proxy | Controle de acesso e cache para repositorios. |
+| Comportamental | Chain of Responsibility | Aprovacao de desconto por niveis. |
+| Comportamental | Command | Encapsular acoes para fila e reexecucao. |
+| Comportamental | Iterator | Percorrer colecoes com filtro encapsulado. |
+| Comportamental | Mediator | Coordenar eventos entre Opportunity e Task. |
+| Comportamental | Memento | Salvar e restaurar estado de Case. |
+| Comportamental | Observer | Reagir a mudancas de status do Case. |
+| Comportamental | State | Variar comportamento conforme estado do Case. |
+| Comportamental | Strategy | Trocar regras de atribuicao de Lead. |
+| Comportamental | Template Method | Definir fluxo de relatorio com filtros customizaveis. |
+| Comportamental | Visitor | Executar operacoes novas sobre Account e Opportunity. |
+
+
 ## Indice rapido (links diretos)
 Criacionais
 - [Factory Method](patterns/FactoryMethod/FactoryMethodPattern.cls)
@@ -36,11 +68,6 @@ Comportamentais
 - [Strategy](patterns/Strategy/StrategyPattern.cls)
 - [Template Method](patterns/TemplateMethod/TemplateMethodPattern.cls)
 - [Visitor](patterns/Visitor/VisitorPattern.cls)
-
-## Estrutura do repositorio
-```
-patterns/<NomeDoPadrao>/<NomeDoPadrao>Pattern.cls
-```
 
 ## Como executar um exemplo
 No Developer Console ou no VS Code (Execute Anonymous), rode:
@@ -88,32 +115,6 @@ VisitorPattern.demo();
 - Foco em objetos padrao e cenarios reais de negocio.
 - Sem DML no `demo()` para facilitar o estudo sem efeitos colaterais.
 - Comentarios claros para uso didatico e onboarding de equipe.
-
-## Cenarios de uso (por padrao)
-| Categoria | Padrao | Quando usar em Salesforce |
-| --- | --- | --- |
-| Criacional | Factory Method | Criacao de Cases variando por canal (Email, Phone, Web). |
-| Criacional | Abstract Factory | Onboarding de clientes com familias de registros (Sales vs Service). |
-| Criacional | Builder | Montagem de pacotes com Account, Contact, Opportunity e Tasks. |
-| Criacional | Prototype | Criar Leads a partir de template pre-configurado. |
-| Criacional | Singleton | Cache local de configuracoes da org. |
-| Estrutural | Adapter | Integrar payload legado para Lead sem mudar o legado. |
-| Estrutural | Bridge | Notificacoes desacopladas do canal (Email/Chatter). |
-| Estrutural | Composite | Consolidar receita em hierarquias de contas. |
-| Estrutural | Decorator | Enriquecer descricao de Case com camadas (SLA, compliance). |
-| Estrutural | Facade | Simplificar onboarding com um unico metodo. |
-| Estrutural | Flyweight | Reaproveitar templates de Task para reduzir memoria. |
-| Estrutural | Proxy | Controle de acesso e cache para repositorios. |
-| Comportamental | Chain of Responsibility | Aprovacao de desconto por niveis. |
-| Comportamental | Command | Encapsular acoes para fila e reexecucao. |
-| Comportamental | Iterator | Percorrer colecoes com filtro encapsulado. |
-| Comportamental | Mediator | Coordenar eventos entre Opportunity e Task. |
-| Comportamental | Memento | Salvar e restaurar estado de Case. |
-| Comportamental | Observer | Reagir a mudancas de status do Case. |
-| Comportamental | State | Variar comportamento conforme estado do Case. |
-| Comportamental | Strategy | Trocar regras de atribuicao de Lead. |
-| Comportamental | Template Method | Definir fluxo de relatorio com filtros customizaveis. |
-| Comportamental | Visitor | Executar operacoes novas sobre Account e Opportunity. |
 
 ## Observacoes importantes
 - `ProxyPattern` executa SOQL real; use um Id valido no seu ambiente.
