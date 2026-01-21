@@ -1,6 +1,6 @@
 # Design Patterns em Apex (Salesforce)
 
-Repositorio com os 22 padroes GoF implementados em Apex, com exemplos praticos e alinhados ao dia a dia de quem desenvolve em Salesforce (Sales/Service Cloud). Cada padrao possui uma classe com cabecalho contextual e metodos documentados em nivel de projeto.
+Repositorio com os 22 padroes implementados em Apex, com exemplos praticos e alinhados ao dia a dia de quem desenvolve em Salesforce (Sales/Service Cloud). Cada padrao possui uma classe com cabecalho contextual e metodos documentados em nivel de projeto.
 
 ## O que voce encontra aqui
 - 22 padrões em Apex, organizados por pasta.
